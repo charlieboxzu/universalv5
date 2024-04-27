@@ -157,6 +157,45 @@
         border-radius: 30px;
         color: #fff;
         transition: border-radius 0.1s;
-    }</style>
-
+    }
+</style>
+<body>
 <script src="https://kit.fontawesome.com/fcaf79e23b.js" crossorigin="anonymous"></script>
+      <nav class="navbar">
+    <div class="container">
+      <img onclick="window.location.href='/'" style="width:50px;" src="/school/ghost.png"></img>
+        <br>
+ <input type="text" class="input" placeholder="Search or enter a URL">
+            <div class="desc left-margin">
+                <p id="uv-error"></p>
+                <pre id="uv-error-code"></pre>
+            </div>
+            <div class="desc left-margin">
+            </div>
+      <ul class="nav-links">
+              <li><a href="/school/"><i class="fa-solid fa-gamepad"></i> Games</a></li>
+        <li><a href="/algebra.html"><i class="fa-solid fa-phone"></i> Apps</a></li>
+        <li><a href="/tutors/"><i class="fa-solid fa-gear"></i></a></li>
+            <a class="active"></a>
+      </ul>
+    </div>
+  </nav>
+  <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFWKKRRXLT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-WFWKKRRXLT');
+        </script>
+        <!--subtitle shit-->
+        <script>
+            // Function to change the subtitle
+            function changeSub(num) {
+                document.getElementById("subtitle").innerText = tell[num];
+            }
+</body>
