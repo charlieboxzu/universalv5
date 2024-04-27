@@ -20,7 +20,7 @@
 
 	<script type="text/javascript" src="embed.js"></script>
 	<script>
-		var frame = webretroEmbed(document.getElementById("webretro-container"), "../", { system: "mgba", rom: "gold.gbc" });
+		var frame = webretroEmbed(document.getElementById("webretro-container"), "../", { system: "autodetect", rom: "gold.gbc" });
 		document.getElementById("fullscreen").onclick = function () {
 			frame.requestFullscreen();
 		};
