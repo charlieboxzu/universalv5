@@ -1,0 +1,6 @@
+<div class="game-icon" onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://play.geforcenow.com/');">
+              <button>
+                  <img src="https://i.ytimg.com/vi/bvlK_Wc_aYo/maxresdefault.jpg" alt="vscode">
+              </button>
+              <p>geforce now</p>
+          </div>
