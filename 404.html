@@ -1,47 +1,52 @@
-<html><head><title>Home</title>
-   <link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png" />
-  <link rel="shortcut icon" href="https://ssl.gstatic.com/classroom/favicon.png" />
-  <meta name="googlebot" content="index, follow, snippet">
-    <base href="/">
 
-<style>
- @import url('/index.css');
-   #register-proxy {
-      font-family: 'Be Vietnam Pro', sans-serif;
-        background-color: gray;
-        color: white;
-        border-radius: 10px;
-        width: 175x;
-        height: 40px;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-     transition: 0.7s;
-      }
-  #register-proxy:hover {
-    transform: scale(1.1);
-         box-shadow: 0 0 1vw white;
-  }
-  
-</style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Kardna</title>
+    <meta
+      name="description"
+      content="Ultraviolet is a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers. Unblock sites today!"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#434c5e"
+    />
+    <meta name="googlebot" content="noindex, nofollow, nosnippet" />
+    <base href="/" />
+    <link rel="shortcut icon" content="favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-</head><body><br>
-<br>
-<br>
-<br>
-<br>
-<center><h1>Error: Proxy could not load</h1>
-    
-    <div class="desc">
-      <center><p style="font-size: 22px;"><h4>SW has not been registered! To register, press the button below or reload the page.</h4></p></center>
+  <body>
+    <div class="logo-wrapper left-margin">
+      <h1>Kardna Pr<wbr>oxy</h1>
+    </div>
+    <div class="desc left-margin">
+      <p>The server could not route your request.</p>
       <p id="uv-error"></p>
       <code id="uv-error-code"></code>
-      <center><button id="register-proxy" value="Register proxy">
-        Register Proxy
-      </button></center>
-    
-    <script src="./uv/uv.bundle.js"></script>
-    <script src="./uv/uv.config.js"></script>
-    <script src="./assets/register-sw.js"></script>
-    <script src="./error.js" defer=""></script>
-</b></b></b></div></b></b></body></html>
+      <button id="uv-register-sw" value="Register service worker">
+Load Pro<wbr>xy!
+      </button>
+    </div>
+    <footer>
+      <a
+        title="For privacy implications related to Ultraviolet."
+        href="https://github.com/titaniumnetwork-dev/Ultraviolet/raw/main/LICENSE"
+        style="margin-left: auto"
+        >License</a
+      >
+      <span>Ultraviolet &copy; TN 2022 || Kardna Network</span>
+    </footer>
+    <script src="uv/uv.bundle.js"></script>
+    <script src="uv/uv.config.js"></script>
+    <script src="/assets/register-sw.js"></script>
+    <script src="/error.js"></script>
+  </body>
+</html>
