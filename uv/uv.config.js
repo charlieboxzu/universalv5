@@ -3,7 +3,7 @@ self.__uv$config = {
     prefix: '/service/',
 
     /* Bare server URL */ 
-    bare: 'https://tomp.app',
+    bare: 'https://ghostiscool-hvsxb7l2ca-uc.a.run.app/bare/',
     
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
