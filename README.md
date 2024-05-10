@@ -6,4 +6,4 @@ Thanks to Titanium Network For [Ultraviolet](https://github.com/titaniumnetwork-
 
 Thanks to [Classroom 6x](https://sites.google.com/view/classroom6x) for most of the games!
 
-Thanks to [Tomhttp](https://github.com/TompHTTP) For Bare Server! (We are using the default tomhttp server)
+Thanks to [Tomhttp](https://github.com/TompHTTP) For Bare Server!
