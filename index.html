@@ -10,6 +10,8 @@
         font-family: 'Be Vietnam Pro', sans-serif;
         -ms-overflow-style: none;
         scrollbar-width: none; 
+        border: none;
+        overflow: hidden;
     }
 
 body -webkit-scrollbar {
@@ -126,28 +128,45 @@ color: white;
     float: right;
     right: 3px;
     padding: 5px;
-    float:left;
+    float: left;
+}
+.tabbutton1 {
+    background-color: #0d0d0d;
+    padding: 5px 5px 7px;
+    border-radius: 5px;
+    width: 50px;
+    height: 35px;
+    color:white;
+    display: inline-flex;
+    float: right;
+    right: 3px;
+    padding: 5px;
+    float: left;
 }
 .tab active {
 background-color: #333;
 }
-    .material-icons.md-20 { font-size: 20px; }
 
     .tab:hover {
   background-color: #333;
 }
-#uv-frame active {
-z-index: 1;
-}
 
-.active {
-    z-index: 10;
-}
-
-.tabcontainera {
-        z-index: 1;
+.tabcontaineractive {
+        z-index: 9999999;
+        position: relative;
     }
 
+    .tabcontainer {
+            width: 100%;
+            height: 100%;
+    }
+
+    .nav-links li a:hover {
+  color: #ff6666 ;
+}
+
+.tabs {
+}
 </style>
 <head>
     <meta charset="UTF-8">
@@ -202,10 +221,10 @@ l.parentNode.insertBefore(s, l);
 </script>
 <!--This is the tab container it contains tabs :3-->
 <div class="tabs">
-<div class="tabcontainera" id="tab">
+<div class="tabcontainer" id="tab">
+    <iframe style="display: block; position: absolute; top: 100px;" id="uv-frame" scrolling="no" class="uv-frame" src="/browser.html"></iframe>
         <div class="tab" onclick="switchtab()">Home</div>
-        <iframe style="display: block; position: absolute; top: 150px;" id="uv-frame" class="uv-frame" src="/browser.html"></iframe>
-</div>
+        </div>
 </div>
     <!--These are the tab scripts-->
     <!--How they work is very simple-->
@@ -213,18 +232,35 @@ l.parentNode.insertBefore(s, l);
     <script>
     var i = 0;
   var tab = document.getElementById('tab')
+  let tabCounter = 1; 
 
+// new tab
   function newtab() {
-    var clone = tab.cloneNode(true);
-    clone.id = "tab" + ++i;
-    clone.className = "tabcontainera";
-    tab.parentNode.appendChild(clone);
-  }
-
-  function closetab() {
-    const tabContainers = document.querySelectorAll('.tabcontainera');
+// Remove the old tabcontaineractive before continuing
+    const tabContainers = document.querySelectorAll('.tabcontaineractive');
     tabContainers.forEach((container) => {
-        container.remove('tabcontainera');
+        container.classList.remove('tabcontaineractive');
+    });
+// set the tab contianer
+            const tabsContainer = document.querySelector('.tabs');
+// Create the new tab
+
+            const newTabContainer = document.createElement('div');
+            newTabContainer.classList.add('tabcontaineractive');
+            newTabContainer.id = `tab${++tabCounter}`;
+            newTabContainer.innerHTML = `
+                <iframe style="display: block; position: absolute; top: 100px;" id="uv-frame" scrolling="no" class="uv-frame" src="/browser.html"></iframe>
+                <div class="tab" onclick="switchtab()">New Tab ${tabCounter}</div>
+            `;
+
+            tabsContainer.appendChild(newTabContainer);
+  }
+//close tab
+  function closetab() {
+    //remove the tab
+    const tabContainers = document.querySelectorAll('.tabcontaineractive');
+    tabContainers.forEach((container) => {
+        container.remove('tabcontaineractive');
     });
 
     if (parent.id === 'tab') {
@@ -233,15 +269,16 @@ l.parentNode.insertBefore(s, l);
         console.log('Hey you cant delete the first tab!');
 }
   }
-
+// switch the tab
 function switchtab() {
-    const tabContainers = document.querySelectorAll('.tabcontainera');
+    //remove tabcontaineractive from all the other tabs
+    const tabContainers = document.querySelectorAll('.tabcontaineractive');
     tabContainers.forEach((container) => {
-        container.classList.remove('tabcontainera');
+        container.classList.remove('tabcontaineractive');
     });
+    // add tabcontaineractive to the selected tab
     const parent = event.target.parentNode;
-    parent.className = 'tabcontainera';
-
+    parent.classList.add('tabcontaineractive');
 }
 
     </script>
@@ -250,13 +287,14 @@ function switchtab() {
     <!--why are you peaking into the code anyway? dont you have better things to do???-->
     <!--They add tabs and delete them-->
     <!--BUT IM JUST A NOTE WHAT WOULD I KNOW-->
+    <div class="tabbuttons">
     <div class="tabbutton">
         <span class="material-symbols-outlined" style="font-size:17px; font:bold; align-items: center; text-align: center;" onclick="newtab()">
             add
             </span>
             </div>
-            <div class="tabbutton">
-                <span class="material-symbols-outlined" style="font-size:17px; font:bold; align-items: center; text-align: center;" onclick="closetab()">
+            <div class="tabbutton1">
+                <span class="material-symbols-outlined" style="font-size:17px; font:bold; align-items: center; text-align: center; float: left ;" onclick="closetab()">
                     close
                     </span>
         </div>
