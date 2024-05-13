@@ -2,14 +2,19 @@
 <script src="https://kit.fontawesome.com/fcaf79e23b.js" crossorigin="anonymous"></script>
     <script src="index.js" defer></script>
 <meta name="2a1c3d0cca0a4915d751538953dc3ddc3259ecea" content="2a1c3d0cca0a4915d751538953dc3ddc3259ecea" />
+<!--Nobodycares is a skiddy kid af-->
 <style>
     body {
         background-color: #171717;
         color: grey;
         font-family: 'Be Vietnam Pro', sans-serif;
-        margin: 0;
+        -ms-overflow-style: none;
+        scrollbar-width: none; 
     }
 
+body -webkit-scrollbar {
+  display: none;
+}
     .topbar {
         background-color: #333;
         overflow: hidden;
@@ -78,74 +83,6 @@
         font-size: 30;
     }
 
-    .mint {
-        background-color: #b4ebcc;
-        color: white;
-    }
-
-        .mint .topbar {
-            background-color: #8cb79f;
-            overflow: hidden;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            z-index: 1;
-        }
-
-            .mint .topbar a {
-                color: white;
-                text-align: center;
-                padding: 10px;
-                text-decoration: none;
-                font-size: 17px;
-                z-index: 1;
-            }
-
-        .mint .dropdown {
-            position: relative;
-            display: inline-block;
-            left: 150px;
-        }
-
-        .mint .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            padding: 16px 12px;
-            z-index: 1;
-        }
-
-    .dropdown {
-        position: relative;
-        display: inline-block;
-        left: 150px;
-        color: white;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #171717;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 16px 12px;
-        z-index: 1;
-        color: white;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    button {
-        background-color: transparent;
-        border: none;
-        color: white;
-        font-size: 17px;
-        font-family: 'Poppins', sans-serif;
-    }
     input {
         background: none;
         font-family: 'Be Vietnam Pro', sans-serif;
@@ -163,6 +100,49 @@
 .discord {
 color: white;
 }
+.tabbar {
+    padding: 30px 20px;
+    overflow:hidden
+}
+.tab {
+    background-color: #0d0d0d;
+    color:white;
+    padding: 15px 5px;
+    border-radius: 5px;
+    width: 200px;
+    display: inline-flex;
+    margin-right: 10px;
+    float:left;
+}
+.tabbutton {
+    background-color: #0d0d0d;
+    padding: 5px 5px 7px;
+    border-radius: 5px;
+    width: 50px;
+    height: 35px;
+    color:white;
+    display: inline-flex;
+}
+.tab active {
+background-color: #333;
+}
+    .material-icons.md-20 { font-size: 20px; }
+
+    .tab:hover {
+  background-color: #333;
+}
+#uv-frame active {
+z-index: 1;
+}
+
+.active {
+    z-index: 10;
+}
+
+.tabcontainera {
+        z-index: 1;
+    }
+
 </style>
 <head>
     <meta charset="UTF-8">
@@ -180,6 +160,8 @@ color: white;
 </head>
 
 <body>
+    <!--This is where the ads go-->
+    <!--These are to help pay for hosting and domains :3-->
     <script>
 (function(lpjv){
 var d = document,
@@ -213,179 +195,66 @@ s.async = true;
 l.parentNode.insertBefore(s, l);
 })({})
 </script>
-       <nav class="navbar">
-    <div class="container">
-      <img onclick="window.location.href='/'" style="width:50px;" src="/school/ghost.png"></img>
-        <br>
- <input type="text" class="input" placeholder="Search or enter a URL">
-            <div class="desc left-margin">
-                <p id="uv-error"></p>
-                <pre id="uv-error-code"></pre>
+<!--This is the tab container it contains tabs :3-->
+<div class="tabs">
+<div class="tabcontainera" id="tab">
+        <div class="tab" onclick="switchtab()">Home</div>
+        <iframe style="display: block; position: absolute; top: 150px;" id="uv-frame" class="uv-frame" src="/browser.html"></iframe>
+</div>
+</div>
+    <!--These are the tab scripts-->
+    <!--How they work is very simple-->
+    <!--To make a tab we just simply set clonenode to true when the button is clicked to remove a tab we delete the div thats currently active and to set an active tab we change the class of the tab and iframe-->
+    <script>
+    var i = 0;
+  var tab = document.getElementById('tab')
+
+  function newtab() {
+    var clone = tab.cloneNode(true);
+    clone.id = "tab" + ++i;
+    clone.className = "tabcontainera";
+    tab.parentNode.appendChild(clone);
+  }
+
+  function closetab() {
+    const tabContainers = document.querySelectorAll('.tabcontainera');
+    tabContainers.forEach((container) => {
+        container.remove('tabcontainera');
+    });
+
+    if (parent.id === 'tab') {
+        console.log('Hey you cant delete the first tab!');
+    } else {
+        console.log('Hey you cant delete the first tab!');
+}
+  }
+
+function switchtab() {
+    const tabContainers = document.querySelectorAll('.tabcontainera');
+    tabContainers.forEach((container) => {
+        container.classList.remove('tabcontainera');
+    });
+    const parent = event.target.parentNode;
+    parent.className = 'tabcontainera';
+
+}
+
+    </script>
+    <!--now if you couldnt tell these are tab buttons-->
+    <!-- i mean i think you know what those do dont you?-->
+    <!--why are you peaking into the code anyway? dont you have better things to do???-->
+    <!--They add tabs and delete them-->
+    <!--BUT IM JUST A NOTE WHAT WOULD I KNOW-->
+    <div class="tabbutton">
+        <span class="material-symbols-outlined" style="font-size:17px; font:bold; align-items: center; text-align: center;" onclick="newtab()">
+            add
+            </span>
             </div>
-            <div class="desc left-margin">
-            </div>
-      <ul class="nav-links">
-              <li><a href="/school/"><i class="fa-solid fa-gamepad"></i> Games</a></li>
-        <li><a href="/algebra.html"><i class="fa-solid fa-phone"></i> Apps</a></li>
-<li><a href="/tutors/"><i class="fa-solid fa-gear"></i></a></li>
-<li><a href="/widget.html"><i class="fa-brands fa-discord"></i></a></li>
-            <a class="active"></a>
-      </ul>
-    </div>
-  </nav>
-
-        <p align="center"><img id="logo2" src="Ghost.png" height="200"></p>
-        <center>
-
-            <p class="ex2">Ghost Proxy</p>
-            <h2><span id="subtitle">...</span></h2>
-        </center>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFWKKRRXLT"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-
-            gtag('config', 'G-WFWKKRRXLT');
-        </script>
-        <!--subtitle shit-->
-        <script>
-            // Function to change the subtitle
-            function changeSub(num) {
-                document.getElementById("subtitle").innerText = tell[num];
-            }
-
-            // Change this or add subtitles
-            var tell = [
-                "Nobodycares is a skiddy kid af",
-                "Join Our Discord! https://discord.gg/mBje25Yqkk",
-                "What even is that?",
-                "You need help",
-                "Get Recked",
-                "Hate them damn admins",
-                "Ghost is crazy",
-                "CoolOnlineGames",
-                "got suspended again lmao",
-                "ur funny",
-                "LOL",
-                "got taken down fr fr",
-                "help me",
-                "proxys go crazy right now",
-                "made by a student (crazy right)",
-                "i got a glock in my rari",
-                "gren",
-                "im kanye west",
-                "David is the best",
-                "Ghost on crack!",
-                "unblockers go crazy rn!",
-                "76.138.200.152 (your ip)",
-                "Free for all",
-                "A wise man once told me to use Ghost Proxy",
-                "i need starz plz https://github.com/The-Ghost-Network/Ghost-Proxy",
-                "I Code Cool Stuff :D",
-                "skiddy widdy",
-                "IM NOT A FEMBOY STOP ASKING :3 - Nobodycares",
-                "Jordan was here 😱 (creator of jordansmathwork)",
-                "Ghost proxy was skidded - Clipped",
-                "JMW is cool",
-                "drake snake"
-            ];
-
-            var howmany = tell.length;
-            var randomIndex = Math.floor(Math.random() * howmany);
-
-            document.getElementById("subtitle").innerText = tell[randomIndex];
-
-            // Function to change the subtitle
-            function changeSplash(num) {
-                var sub = "Set current splash to splash " + num + ", " + tell[num];
-                document.getElementById("subtitle").innerText = tell[num];
-                return sub;
-            }
-        </script>
-        <!--Settings-->
-        <script>
-            function settings() {
-                document.getElementById("settingsiframe").style.zIndex = "1";
-            }
-        </script>
-        <!--Theme 1 (mint)-->
-        <script>
-            function minttheme() {
-                var element = document.body;
-                var hasblueTheme = element.classList.contains("blue");
-                var hasMintTheme = element.classList.contains("mint");
-                var hasGhostTheme = element.classList.contains("ghost-theme");
-                // Remove existing themes if present
-                if (hasGhostTheme) {
-                    element.classList.remove("ghost-theme");
-                }
-
-                if (hasMintTheme) {
-                    element.classList.remove("blue");
-                }
-
-                if (!hasMintTheme) {
-                    element.classList.add("mint");
-                    document.getElementById('logo').src = 'mint_logo.png';
-                    document.getElementById('logo2').src = 'mint_logo.png';
-                }
-            }
-        </script>
-        <!--Theme 2 (Ghost)-->
-        <script>
-            function ghosttheme() {
-                var element = document.body;
-                var hasblueTheme = element.classList.contains("blue");
-                var hasMintTheme = element.classList.contains("mint");
-                var hasGhostTheme = element.classList.contains("ghost-theme");
-                // Remove existing themes if present
-                if (hasGhostTheme) {
-                    element.classList.remove("blue");
-                }
-
-                if (hasMintTheme) {
-                    element.classList.remove("mint");
-                }
-                element.classList.add("ghost-theme");
-                document.getElementById('logo').src = 'Ghost.png';
-                document.getElementById('logo2').src = 'Ghost.png';
-            }
-        </script>
-        <!--Theme 3 Blue-->
-        <script>
-            function blue() {
-                var element = document.body;
-                var hasMintTheme = element.classList.contains("mint");
-                var hasblueTheme = element.classList.contains("blue");
-                var hasGhostTheme = element.classList.contains("ghost-theme");
-
-                // Remove existing themes if present
-                if (hasGhostTheme) {
-                    element.classList.remove("ghost-theme");
-                }
-
-                if (hasMintTheme) {
-                    element.classList.remove("mint");
-                }
-
-                // Add the blue theme
-                element.classList.add("blue");
-                document.getElementById('logo').src = 'ghostblue.png';
-                document.getElementById('logo2').src = 'ghostblue.png';
-            }
-        </script>
-
-        <!-- Gotta get that copyright in-->
-        <p align="center">© Copyright Ghost Network 2024</p>
-  <span><a style="color:white; text-decoration:none;position: absolute;left: 5px;font-weight: bold;" href="/credits.html">Credits</a></span>
-                              <span><a style="color:white; text-decoration:none;position: absolute; right: 5px;" href="/cord.html">Discord Server</a></span>
-        <script src="./assets/script.js" defer></script>
-<script async src="https://arc.io/widget.min.js#vJLocr6G"></script>
+            <div class="tabbutton">
+                <span class="material-symbols-outlined" style="font-size:17px; font:bold; align-items: center; text-align: center;" onclick="closetab()">
+                    close
+                    </span>
+        </div>
 </body>
 
 </html>
