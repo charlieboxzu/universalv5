@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="school.css" />
-<link rel="stylesheet" href="/index.css" />
+<link rel="stylesheet" href="/assets/css/index.css"/>
+<link rel="stylesheet" href="/assets/css/themes.css"/>
 <script src="https://kit.fontawesome.com/fcaf79e23b.js" crossorigin="anonymous"></script>
-<link rel="shortcut icon" href="Ghost.png" type="image/png">
-<meta name="2a1c3d0cca0a4915d751538953dc3ddc3259ecea" content="2a1c3d0cca0a4915d751538953dc3ddc3259ecea" />
+<link rel="shortcut icon" id="favicon" href="Ghost.png" type="image/png">
 <title>Ghost</title>
 <!--Nobodycares is a skiddy kid af-->
 <style>
@@ -15,7 +15,7 @@
                 width: 120px;
                 height: 120px;
                 position: relative;
-                overflow: hidden;
+             
                 transition: transform 0.3s ease-in-out;
                      border-radius:10px;
                       margin: 15px;
@@ -116,302 +116,111 @@
 .nav-links li a:hover {
   color: #ff6666 ;
 }
+
+/* I LOVE CATPUCCIN :DDDDDDD :3*/
+[data-theme='catppuccinma'] { 
+    background-color: #1e1e2e;
+        color: #574859;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        -ms-overflow-style: none;
+        scrollbar-width: none; 
+        border: none;
+     
+}
+[data-theme='catppuccinma']
+    .navbar {
+    background-color: #181925;
+ 
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+  [data-theme='catppuccinma']
+    .navbar a {
+      color: white;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      font-size: 17px;
+      z-index: 1;
+  }
+  [data-theme='red'] { 
+    background-color: #d52538;
+        color: #574859;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        -ms-overflow-style: none;
+        scrollbar-width: none; 
+        border: none;
+     
+}
+[data-theme='red']
+    .navbar {
+    background-color: #881723;
+ 
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+  [data-theme='red']
+    .navbar a {
+      color: white;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      font-size: 17px;
+      z-index: 1;
+  }
+
+  .ex2 {
+    color: white;
+  }
+
+  [data-theme='catppuccinma'] {
+  .active {
+    color: #9194ab;
+  }
+}
+
+[data-theme='green'] {
+
+body {
+    background-color: #49d533;
+        color: white;
+  }
+}
 </style>
 <body>
-<script type='text/javascript' src='//pl23438018.highcpmgate.com/70/ec/e0/70ece0f2b7c243cf0b6a419054241884.js'></script>
-<script type='text/javascript' src='//pl23437985.highcpmgate.com/c8/b6/20/c8b620abc68d447cdfa589f05cf268ab.js'></script>
      <nav class="navbar">
     <div class="container">
-      <img style="width:50px;" onclick="window.location.href='/'" src="/school/ghost.png"></img>
-        <br>
-      <ul class="nav-links">
-        <li><a href="/school/"><i class="fa-solid fa-gamepad"></i> Games</a></li>
-        <li><a href="/algebra.html"><i class="fa-solid fa-phone"></i> Apps</a></li>
-        <li><a href="/tutors/"><i class="fa-solid fa-gear"></i></a></li>
-            <a class="active"></a>
-      </ul>
+        <img onclick="window.location.href='/index.html'" style="width:50px;" src="/school/ghost.png"></img>
+        <div class="desc left-margin" style="height: 50px;">
+            <p id="uv-error"></p>
+            <pre id="uv-error-code"></pre>
+        </div>
+        <div class="desc left-margin">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/school/"><i class="fa-solid fa-gamepad active"></i> Games</a></li>
+            <li><a href="/algebra.html"><i class="fa-solid fa-phone active"></i> Apps</a></li>
+           <li><a href="/settings.html"><i class="fa-solid fa-gear active"></i> Settings</a></li>
+           <li><a href="/browser.html"><i class="fa-solid fa-search active"></i> Pro<x>xy</x></a></li>
+           <li><a href="/disc.html"><i class="fa-brands fa-discord active"></i> Dis<x>cord</x></a></li>
+                 </ul>
     </div>
   </nav>
     <center>
        <br>
 <br>
-<h1>Games</h1>
+<p class="ex2">Games</p>
+<p>You can request games on the <span style="color: #5ffe43" onclick="window.location.href = ('https://dsc.gg/The-Ghost-Network')">Discord Server!</span></p>
     </center>
     <div>
-        <div class="center">
-            <div class="game-icons">
-                <div class="game-icon" onclick="window.location.href='/school/src/1v1-lol'">
-                    <button>
-                        <img src="assets/1v1.png" alt="1v1.lol">
-                    </button>
-                    <p>1v1.LOL</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/1-on-1-basketball/index.html'">
-                    <button>
-                        <img src="assets/1on1.png" alt="1 On 1 Basketball">
-                    </button>
-                    <p>1 On 1 BasketBall</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/1-on-1-football/index.html'">
-                    <button>
-                        <img src="assets/1o1football.png" alt="1 On 1 Football">
-                    </button>
-                    <p>1 On 1 Football</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/basket-bros/index.html'">
-                    <button>
-                        <img src="assets/basketbros.png" alt="basketbros">
-                    </button>
-                    <p>Basket Bros</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/slope/index.html'">
-                    <button>
-                        <img src="assets/slope.png" alt="slope">
-                    </button>
-                    <p>Slope</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/baldi/index.html'">
-                    <button>
-                        <img src="assets/baldi.png" alt="slope">
-                    </button>
-                    <p>Baldi's Basics</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/vex6/index.html'">
-                    <button>
-                        <img src="assets/vex6.png" alt="slope">
-                    </button>
-                    <p>Vex 6</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/basketbro-stars/index.html'">
-                    <button>
-                        <img src="assets/basketball-stars.png" alt="bbstars">
-                    </button>
-                    <p>BasketBall Stars</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/2048/index.html'">
-                    <button>
-                        <img src="assets/2048.png" alt="2048">
-                    </button>
-                    <p>2048</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/awesome-tanks/index.html'">
-                    <button>
-                        <img src="assets/atank.png" alt="tank">
-                    </button>
-                    <p>Awesome Tanks</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/super-mario-64/index.html'">
-                    <button>
-                        <img src="assets/sm64.png" alt="sm64">
-                    </button>
-                    <p>Super Mario 64</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/achivement-unlocked/index.html'">
-                    <button>
-                        <img src="assets/achievementunlocked.png" alt="unlocked">
-                    </button>
-                    <p>Achivement Unlocked</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/arcane/index.html'">
-                    <button>
-                        <img src="assets/arcane.png" alt="arcane">
-                    </button>
-                    <p>Arcane</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/blox.html'">
-                    <button>
-                        <img src="https://cdn.now.gg/apps-content/com.roblox.client/icon/roblox.png" alt="sm64">
-                    </button>
-                    <p>Roblox</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/among-us/index.html'">
-                    <button>
-                        <img src="assets/amongus.png" alt="amongus">
-                    </button>
-                    <p>Among Us</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/8-ball-pool/index.html'">
-                    <button>
-                        <img src="assets/8ball.png" alt="8ball">
-                    </button>
-                    <p>8 Ball Pool</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/OvO/index.html'">
-                    <button>
-                        <img src="assets/OvO.png" alt="OvO">
-                    </button>
-                    <p>OvO</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/OvO2/index.html'">
-                    <button>
-                        <img src="assets/OvO2.png" alt="OvO2">
-                    </button>
-                    <p>OvO 2</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/60-sec-burger-run/index.html'">
-                    <button>
-                        <img src="assets/burger.png" alt="60secburgerrun">
-                    </button>
-                    <p>60 Second Burger Run</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/60-sec-santa-run/index.html'">
-                    <button>
-                        <img src="assets/santa.png" alt="60secsantarun">
-                    </button>
-                    <p>60 Second Santa Run</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/timeshooter/index.html'">
-                    <button>
-                        <img src="assets/shoot.png" alt="timeshooter">
-                    </button>
-                    <p>TimeShooter</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/drift-boss/index.html'">
-                    <button>
-                        <img src="assets/driftboss.png" alt="driftboss">
-                    </button>
-                    <p>Drift Boss</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/vex5/index.html'">
-                    <button>
-                        <img src="assets/vex5.png" alt="vex5">
-                    </button>
-                    <p>Vex 5</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/Stickmanhook/index.html'">
-                    <button>
-                        <img src="assets/stickmanhook.png" alt="stickmanhook">
-                    </button>
-                    <p>Stickman Hook</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/Retrobowl/index.html'">
-                    <button>
-                        <img src="assets/retrobowl.png" alt="retrobowl">
-                    </button>
-                    <p>Retrobowl</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/Bitlife/index.html'">
-                    <button>
-                        <img src="assets/bitlife.png" alt="bitlife">
-                    </button>
-                    <p>Bitlife</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/geomatry-dash/index.html'">
-                    <button>
-                        <img src="assets/geodash.png" alt="geomatry dash">
-                    </button>
-                    <p>Geomatry Dash</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/btd/index.html'">
-                    <button>
-                        <img src="assets/btd.png" alt="btd">
-                    </button>
-                    <p>Balloons Tower Defence </p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/fnf/index.html'">
-                    <button>
-                        <img src="assets/fnf.png" alt="fnf">
-                    </button>
-                    <p>Friday Night Funkin </p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/angrybirds/index.html'">
-                    <button>
-                        <img src="assets/angrybirds.png" alt="angrybids">
-                    </button>
-                    <p>Angry Birds </p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/portal/index.html'">
-                    <button>
-                        <img src="assets/portal.png" alt="portal">
-                    </button>
-                    <p>Portal </p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/bob-the-builder/index.html'">
-                    <button>
-                        <img src="assets/bob.png" alt="bob">
-                    </button>
-                    <p>Bob the Builder</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/bloxorz/index.html'">
-                    <button>
-                        <img src="assets/bloxorz.png" alt="bloxorz">
-                    </button>
-                    <p>Blockorz</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/achivement-unlocked2/index.html'">
-                    <button>
-                        <img src="assets/acunlocked2.png" alt="acu2">
-                    </button>
-                    <p>Achivement Unlocked 2</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/minecraft/index.html'">
-                    <button>
-                        <img src="assets/minecraft.png" alt="minecraft">
-                    </button>
-                    <p>Minecraft 1.5</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/happy-wheels/index.html'">
-                    <button>
-                        <img src="assets/happywheels.png" alt="happywheels">
-                    </button>
-                    <p>Happy Wheels</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/basket-random/index.html'">
-                    <button>
-                        <img src="assets/basketrandom.png" alt="basketrandom">
-                    </button>
-                    <p>Basket Random</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/web-retro/index.html'">
-                    <button>
-                        <img src="assets/retroarch.png" alt="retroarch">
-                    </button>
-                    <p>Webretro</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/web-retro/embed/pokemongold.html'">
-                    <button>
-                        <img src="assets/pokemongold.png" alt="retroarch">
-                    </button>
-                    <p>Pokemon Gold</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/web-retro/embed/pokemoncrystal.html'">
-                    <button>
-                        <img src="assets/pokemonecrystal.png" alt="retroarch">
-                    </button>
-                    <p>Pokemon Crystal</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/super-mario-run/index.html'">
-                    <button>
-                        <img src="assets/smrun.png" alt="retroarch">
-                    </button>
-                    <p>Super Mario Run</p>
-                </div>
-                <div class="game-icon" onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://than1089.github.io/adventure-capitalist/');">
-                    <button>
-                        <img src="assets/adventure.png" alt="av">
-                    </button>
-                    <p>Adventure Capitalist</p>
-                </div>
- <div class="game-icon" onclick="location.href = __uv$config.prefix + __uv$config.encodeUrl('https://funnyshooter.github.io');">
-                    <button>
-                        <img src="assets/funnyshooter.png" alt="av">
-                    </button>
-                    <p>Funny Shooter</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/hole-io/index.html'">
-                    <button>
-                        <img src="assets/holeio.png" alt="holeio">
-                    </button>
-                    <p>Hole.io</p>
-                </div>
-                <div class="game-icon" onclick="window.location.href='/school/src/cut-the-rope/index.html'">
-                    <button>
-                        <img src="assets/cuttherope.png" alt="cuttherope">
-                    </button>
-                    <p>Cut The Rope</p>
-                </div>
-            </div>
-            <script async src="https://arc.io/widget.min.js#vJLocr6G"></script>
+      <center>
+            <div class="game-icons" id="game-icons">
+              </div>
+        </center>
  <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFWKKRRXLT"></script>
         <script>
@@ -424,7 +233,33 @@
 
             gtag('config', 'G-WFWKKRRXLT');
         </script>
+        <script> 
+
+    addEventListener("DOMContentLoaded", async (event) => {
+          const responce = await fetch('./games.json');
+          const gameData = await responce.json();
+           gameData.forEach(game => {
+            const gameicons = document.getElementById('game-icons')
+
+            const games = document.createElement('div')
+            games.classList.add('game-icon')
+            games.setAttribute('onclick', "location.href = ('" +  game.href + "')")
+
+            const gameimg = document.createElement('button')
+            const gameimage = document.createElement('img')
+            gameimage.src = game.img
+
+            const gamename = document.createElement('p')
+            gamename.innerText = game.name;
+
+            gameimg.appendChild(gameimage);
+            games.appendChild(gameimg);
+            games.appendChild(gamename);
+            gameicons.appendChild(games);
+        })
+    });
+        </script>
 </body>
     <script src="/uv/uv.bundle.js"></script>
     <script src="/uv/uv.config.js"></script>
-    <script src="/assets/register-sw.js"></script>
+    <script src="/assets/js/onload.js"></script>

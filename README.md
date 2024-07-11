@@ -1,9 +1,25 @@
-<p align="center"><img src="https://github.com/The-Ghost-Network/Ghost/blob/main/Ghost.png?raw=true" height="250"></p>
+# Under Construction!
 
-<h1 align="center">Ghost Proxy</h1>
+**Join The Discord Server!**
+https://dsc.gg/The-Ghost-Network
+# Ghost (But its Static!)
 
-Thanks to Titanium Network For [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet)!
 
-Thanks to [Classroom 6x](https://sites.google.com/view/classroom6x) for most of the games!
+<img src="./readme/ss.png">
 
-Thanks to [Tomhttp](https://github.com/TompHTTP) For Bare Server!
+
+# Contributers
+
+<a href="https://github.com/The-Ghost-Network/Ghost/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=The-Ghost-Network/Ghost" />
+</a>
+
+**Thanks to Titanium-Network For <a href="https://github.com/TitaniumNetwork-Dev/Ultraviolet">Ultraviolet!**
+
+
+**Thanks to <a href="https://github.com/3kho">3kho</a> For Some Of The Game Assets**
+
+
+
+
+
