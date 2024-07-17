@@ -127,6 +127,10 @@ addEventListener("DOMContentLoaded", async (event) => {
                 }
 
                 function blank() {
+                    var currentUrl = top.location.href;
+                    if (currentUrl === "about:blank") {
+                      console.log(currentUrl);
+                    } else {
                     var win = window.open()
                     var url = "/"
                     var iframe = win.document.createElement('iframe')
@@ -141,9 +145,10 @@ addEventListener("DOMContentLoaded", async (event) => {
                     iframe.style.width = "100%"
                     iframe.style.height = "100%";
                     iframe.src = url
-                
+                  
                     win.document.body.appendChild(iframe)
-                }
+                    }
+                  }
                 if(blanke === null) {
                     localStorage.setItem('abt', 'off')
                 }
