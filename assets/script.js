@@ -6,16 +6,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // We only want the function to run if the key pressed is the Enter key
     if (e.key !== 'Enter') return;
 
-    // Run the formatSearch function on the current value of the input
-    const query = formatSearch(input.value)
+    // We Intercept The URL
+    // Check if it contains a blocked keyword or website
+    if (containsBlockedKeyword(input.value, blocked)) {
+      // Redirect to blockpage
+      window.location.replace('/blocked.html')
+    }
+    else {
+      // If it doesn't contain a blocked keyword then proceed
+      // Run the formatSearch function on the current value of the input
+      const query = formatSearch(input.value)
 
-    // Redirect to         [   uv prefix    ] + [   encoded search query   ]
-    window.location.href = __uv$config.prefix + __uv$config.encodeUrl(query)
+      // Redirect to [uv prefix] + [encoded search query]
+      window.location.href = __uv$config.prefix + __uv$config.encodeUrl(query)
+    }
   }
-})
+
+  function containsBlockedKeyword(input, blockedList) {
+    for (let i = 0; i < blockedList.length; i++) {
+      if (input.includes(blockedList[i])) {
+        return true;
+      }
+    }
+    return false;
+  }
+
 
 function formatSearch(query) {
-  // This function turns the inputted value into a Google search if it's not a normal URL
+  const engine = localStorage.getItem('engine')
+  if (engine === null){
+    localStorage.setItem('engine', 'https://www.google.com/search?=')
+  }
+
   try {
     return new URL(query).toString()
   } catch (e) { }
@@ -25,5 +47,16 @@ function formatSearch(query) {
     if (url.hostname.includes('.')) return url.toString()
   } catch (e) { }
 
-  return new URL(`https://google.com/search?q=${query}`).toString()
+  return new URL(engine + `${query}`).toString()
 }
+
+  const blocked = [
+    "porn",
+    "sex",
+    "xxx",
+    "hentai",
+    "pornhub.com",
+    "xxx.com",
+    "4chan.org"
+  ]
+})
